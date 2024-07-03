@@ -4,10 +4,10 @@
 
 Arrays are a fundamental data structure in JavaScript that allow you to store multiple values in a single variable.In this guide, we'll explore various array functions and their corner cases.
 
-## Creating an 
+## Creating an Array
 
 To create an array, you can use the array literal syntax `[]` or the `Array` constructor.Here's an example:
-    ```javascript
+```javascript
 // Using array literal syntax
 let fruits = ['apple', 'banana', 'orange'];
 
