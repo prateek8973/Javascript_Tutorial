@@ -15,3 +15,38 @@ When the call stack is empty, the event loop takes the first task from the task 
 The task queue, also known as the callback queue, is a queue that holds tasks to be executed by the event loop. These tasks are usually callbacks that are triggered by asynchronous operations.
 
 When an asynchronous operation completes, its corresponding callback is added to the task queue. The event loop then takes these tasks from the task queue and pushes them onto the call stack for execution when the call stack is empty.
+
+# Callbacks
+
+Callbacks are a common pattern in JavaScript for handling asynchronous operations. A callback is a function that is passed as an argument to another function and is executed once the asynchronous operation is complete.
+
+Here's an example of using a callback with `setTimeout`:
+
+```javascript
+setTimeout(() => {
+    console.log("Callback executed after 2 seconds");
+}, 2000);
+```
+
+In this example, the callback function is executed after a delay of 2 seconds.
+
+# Promises
+
+Promises are a more modern approach to handling asynchronous operations in JavaScript. A promise represents the eventual completion or failure of an asynchronous operation and allows you to chain multiple asynchronous operations together.
+
+Here's an example of using a promise with `fetch`:
+
+```javascript
+fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => {
+        console.log("Data fetched successfully:", data);
+    })
+    .catch(error => {
+        console.error("Error fetching data:", error);
+    });
+```
+
+In this example, the `fetch` function returns a promise that resolves to the response from the API. We can then chain `then` methods to handle the response data and `catch` method to handle any errors.
+
+Promises provide a more structured and readable way to handle asynchronous operations compared to callbacks.
