@@ -45,3 +45,35 @@ person.sayHelloTraditional(); // Output: Traditional: Hello, my name is John
 person.sayHelloArrow(); // Output: Arrow: Hello, my name is Jack
 ```
 
+
+## Apply function 
+1. apply()
+The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+
+```func.apply(thisArg, [argsArray])``` 
+```javascript
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+}
+
+const person = { name: 'Alice' };
+
+greet.apply(person, ['Hello', '!']); // Output: Hello, Alice!
+```
+
+## Bind function
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+```func.bind(thisArg, arg1, arg2, ...)``` 
+```javascript
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+}
+
+const person = { name: 'Charlie' };
+
+const boundGreet = greet.bind(person, 'Hey');
+boundGreet('!!'); // Output: Hey, Charlie!!
+```
+
