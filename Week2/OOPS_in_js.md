@@ -47,7 +47,7 @@ Primitives are copied by **value**
 ```Output:10 as number in function is local to it``` 
 
 ## Objects are dynamic 
-### Properties can be added as ### and when required
+### Properties can be added as and when required
 ```javascript
 function createCircle(radius) {
     return {
